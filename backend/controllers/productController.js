@@ -1,6 +1,12 @@
 const ProductController = {
   getAllProducts: async (req, res) => {
-    res.json({ message: 'Get all products' });
+    // Dummy product data to send to the frontend
+    const products = [
+      { id: 1, name: 'Product A' },
+      { id: 2, name: 'Product B' },
+      { id: 3, name: 'Product C' }
+    ];
+    res.json(products); // Send the list of products to the frontend
   },
   createProduct: async (req, res) => {
     res.json({ message: 'Create product' });
